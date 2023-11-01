@@ -5,6 +5,9 @@ package tech.picnic.errorprone.workshop.refasterrules;
 final class WorkshopAssignment4Rules {
   private WorkshopAssignment4Rules() {}
 
+  // The test fails because non Enum comparisons are also rewritten.
+  // Fix the test by tweaking the type parameters.
+
   // XXX: Get the test to pass by improving the Refaster rule (uncommented it first).
 
   //  /** Prefer reference-based quality for enums. */
