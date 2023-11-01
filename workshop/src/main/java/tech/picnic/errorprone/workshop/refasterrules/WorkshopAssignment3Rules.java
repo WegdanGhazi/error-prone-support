@@ -7,13 +7,15 @@ import com.google.common.base.Preconditions;
 final class WorkshopAssignment3Rules {
   private WorkshopAssignment3Rules() {}
 
+  // Tip: check the input and output files to see the expected refactoring.
+
   /** Prefer {@link Preconditions#checkArgument(boolean)} over more verbose alternatives. */
-  static final class CheckArgumentWithoutMessage<T> {
+  static final class CheckArgumentWithoutMessage {
     // XXX: Implement the Refaster rule to get the test green.
   }
 
   /** Prefer {@link Preconditions#checkArgument(boolean, Object)} over more verbose alternatives. */
-  static final class CheckArgumentWithMessage<T> {
+  static final class CheckArgumentWithMessage {
     // XXX: Implement the Refaster rule to get the test green.
   }
 }
