@@ -91,6 +91,8 @@ mvn clean install -DskipTests -Dverification.skip
 ./integration-tests/checkstyle-10.12.4.sh
 ```
 
+XXX: Write how to inspect the changes.
+
 
 ## Part 2: Writing Error Prone checks
 
@@ -101,8 +103,7 @@ which has the same class name but suffixed with `Test`.
 Go to the 
 
 A recommended order of solving the assignments (but not required):
-1. `DeleteEmptyMethod`
-2. `JUnitMethodDeclaration`
+XXX: @Rick write this.
 
 Some utility classes that you can use:
 * ASTHelpers - contains many common operations on the AST.
@@ -123,6 +124,8 @@ If you want to test this locally, run the following commands:
 mvn clean install -DskipTests -Dverification.skip
 ./integration-tests/checkstyle-10.12.4.sh
 ```
+
+XXX: Write here how to inspect the changes.
 
 
 ## Part 3: Bring your own rule!
