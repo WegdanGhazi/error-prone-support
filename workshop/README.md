@@ -39,6 +39,17 @@ Inspecting changes...
 Inspecting emitted warnings...
 ```
 
+Try to run the `WorkshopRefasterRulesTest` and see if it runs.
+You might see the following error:
+
+```
+java: exporting a package from system module jdk.compiler is not allowed with --release
+```
+
+If this happens, go to _Settings -> Build, Execution, Deployment -> Compiler ->
+Java Compiler_ and deselect the option _Use '--release' option for
+cross-compilation (Java 9 and later)_.
+
 Now the project is ready for the rest of the workshop.
 
 Important to know is that for every commit and pull request a GitHub Action

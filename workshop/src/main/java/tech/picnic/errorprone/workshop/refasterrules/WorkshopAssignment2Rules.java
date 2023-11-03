@@ -8,8 +8,8 @@ final class WorkshopAssignment2Rules {
   private WorkshopAssignment2Rules() {}
 
   /**
-   * Prefer {@link ImmutableList#of(Object)} over more contrived alternatives or alternatives that
-   * don't communicate the immutability of the resulting list at the type level.
+   * Prefer {@link ImmutableList#of(Object)} over alternatives that don't communicate the
+   * immutability of the resulting list at the type level.
    */
   static final class ImmutableListOfOne<T> {
     // XXX: Implement this Refaster rule.

@@ -10,7 +10,6 @@ final class WorkshopAssignment4Rules {
 
   // XXX: Get the test to pass by improving the Refaster rule (uncommented it first).
 
-  //  /** Prefer reference-based quality for enums. */
   //  static final class PrimitiveOrReferenceEqualityEnum<T> {
   //    @BeforeTemplate
   //    boolean before(T a, T b) {

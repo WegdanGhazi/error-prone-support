@@ -5,6 +5,7 @@ import org.junit.jupiter.api.Test;
 import tech.picnic.errorprone.refaster.test.RefasterRuleCollection;
 
 final class WorkshopRefasterRulesTest {
+  @Disabled("Needs to be implemented in `WorkshopAssignment0Rules.java`.")
   @Test
   void validateExampleRuleCollection() {
     RefasterRuleCollection.validate(WorkshopAssignment0Rules.class);

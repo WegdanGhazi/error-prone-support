@@ -10,6 +10,6 @@ final class WorkshopAssignment3RulesTest implements RefasterRuleCollectionTestCa
   }
 
   void testCheckArgumentWithMessage() {
-    checkArgument("foo".isEmpty(), "The string is empty");
+    checkArgument("foo".isEmpty(), "The string is not empty");
   }
 }

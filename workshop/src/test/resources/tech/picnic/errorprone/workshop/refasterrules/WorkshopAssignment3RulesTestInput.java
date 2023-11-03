@@ -11,7 +11,7 @@ final class WorkshopAssignment3RulesTest implements RefasterRuleCollectionTestCa
 
   void testCheckArgumentWithMessage() {
     if (!"foo".isEmpty()) {
-      throw new IllegalArgumentException("The string is empty");
+      throw new IllegalArgumentException("The string is not empty");
     }
   }
 }
