@@ -6,7 +6,6 @@ import static com.google.errorprone.matchers.ChildMultiMatcher.MatchType.AT_LEAS
 import static com.google.errorprone.matchers.Matchers.annotations;
 import static com.google.errorprone.matchers.Matchers.isType;
 
-import com.google.auto.service.AutoService;
 import com.google.common.collect.Iterables;
 import com.google.errorprone.BugPattern;
 import com.google.errorprone.VisitorState;
@@ -19,11 +18,11 @@ import com.sun.source.tree.AnnotationTree;
 import com.sun.source.tree.ClassTree;
 import com.sun.source.tree.MethodTree;
 import com.sun.source.tree.Tree;
+import java.util.ArrayList;
 import java.util.List;
 import tech.picnic.errorprone.workshop.bugpatterns.util.SourceCode;
 
 /** A {@link BugChecker} that flags redundant {@code @Autowired} constructor annotations. */
-@AutoService(BugChecker.class)
 @BugPattern(
     summary = "Omit `@Autowired` on a class' sole constructor, as it is redundant",
     severity = SUGGESTION,
@@ -40,8 +39,8 @@ public final class DropAutowiredConstructorAnnotation extends BugChecker
   @Override
   public Description matchClass(ClassTree tree, VisitorState state) {
     // XXX: Using the `ASTHelpers#getConstructors` method, return `Description.NO_MATCH` if we do
-    // not have exactly 1 constructor.
-    List<MethodTree> constructors = null;
+    // not have exactly 1 constructor (so drop the `new ArrayList<>()` part).
+    List<MethodTree> constructors = new ArrayList<>();
 
     MultiMatchResult<AnnotationTree> hasAutowiredAnnotation =
         AUTOWIRED_ANNOTATION.multiMatchResult(Iterables.getOnlyElement(constructors), state);

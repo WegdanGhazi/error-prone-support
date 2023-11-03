@@ -26,7 +26,6 @@ import com.sun.source.tree.MethodInvocationTree;
  * as {@link org.assertj.core.api.AbstractStringAssert#isEqualTo(String)}) are explicitly
  * enumerated. This bug checker generically matches all such current and future overloads.
  */
-@AutoService(BugChecker.class)
 @BugPattern(
     summary = "Prefer `.isNull()` over `.isEqualTo(null)`",
     severity = SUGGESTION,

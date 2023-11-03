@@ -27,7 +27,6 @@ import java.util.Arrays;
 import java.util.List;
 
 /** A {@link BugChecker} that flags redundant identity conversions. */
-@AutoService(BugChecker.class)
 @BugPattern(
     summary = "Avoid or clarify identity conversions",
     severity = WARNING,
